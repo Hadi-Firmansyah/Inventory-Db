@@ -25,7 +25,7 @@ div{
 
 }
 h1{
-    margin-top : 50px;
+    margin-top : 30px;
     font-family: 'Quicksand'; 
     font-weight: bold;
 }
@@ -35,33 +35,33 @@ h1{
 <body>
 <form name="save" action="proses-inventory-simpan.php" method="post" >
     <h1 align="center">INVENTORY PHP</h1>
-    <div class="col-sm-12" style="margin-top: 30px;font-family: 'Quicksand', cursive;">
+    <div class="col-sm-12" style="margin-top: 20px;font-family: 'Quicksand', cursive;">
         <div class="input-group mb-3">
             <div class="input-group-prepend">
                 <span style="width: 130px;" class="input-group-text" id="basic-addon1">Kode Produk </span>
             </div>
-                <input type="text" name="kode" class="form-control" aria-label="Id_card" aria-describedby="basic-addon1" placeholder="AUTO" disabled>
+                <input type="text" name="kodes" class="form-control" aria-label="Id_card" aria-describedby="basic-addon1" placeholder="AUTO" disabled>
             </div>
        
         <div class="input-group mb-3">
             <div class="input-group-prepend">
                 <span style="width: 130px;" class="input-group-text" id="basic-addon1">Nama Produk</span>
             </div>
-                <input type="text" name="nama" class="form-control" aria-label="Id_card" aria-describedby="basic-addon1">        
+                <input type="text" name="namas" class="form-control" aria-label="Id_card" aria-describedby="basic-addon1">        
             </div>
 
         <div class="input-group mb-3">
             <div class="input-group-prepend">
                 <span style="width: 130px;" class="input-group-text" id="basic-addon1">Harga</span>
             </div>
-                <input type="number" name="harga" class="form-control" aria-label="Id_card" aria-describedby="basic-addon1">        
+                <input type="number" name="hargas" class="form-control" aria-label="Id_card" aria-describedby="basic-addon1">        
             </div>  
             
         <div class="input-group mb-3">
             <div class="input-group-prepend">
                 <span style="width: 130px;" class="input-group-text" id="basic-addon1">Satuan</span>
             </div>
-                <select name="satuan" class="form-control">
+                <select name="satuans" class="form-control">
                     <option value="NULL" selected>Pilih</option>
                     <option value="Pcs">Pcs</option>
                     <option value="Box">Box</option>
@@ -72,11 +72,11 @@ h1{
             <div class="input-group-prepend">
                 <span style="width: 130px;" class="input-group-text" id="basic-addon1">Kategori</span>
             </div>
-                <select name="kategori" class="form-control">
+                <select name="kategoris" class="form-control">
                     <option value="NULL" selected>Pilih</option>
-                    <option value="MINUMAN">Minuman</option>
-                    <option value="MAKANAN">Makanan</option>
-                    <option value="BARANG">Barang<option>
+                    <option value="Minuman">Minuman</option>
+                    <option value="Makanan">Makanan</option>
+                    <option value="Barang">Barang<option>
                 </select>
             </div>
 
@@ -84,14 +84,14 @@ h1{
             <div class="input-group-prepend">
                 <span style="width: 130px;" class="input-group-text" id="basic-addon1">URL Gambar</span>
             </div>
-                <input type="url" name="gambar" class="form-control" aria-label="Id_card" aria-describedby="basic-addon1">        
+                <input type="text" name="gambars" class="form-control" aria-label="Id_card" aria-describedby="basic-addon1">        
             </div>
 
         <div class="input-group mb-3">
             <div class="input-group-prepend">
                 <span style="width: 130px;" class="input-group-text" id="basic-addon1">Stok</span>
             </div>
-                <input type="number" name="stok" class="form-control" aria-label="Id_card" aria-describedby="basic-addon1">        
+                <input type="number" name="stoks" class="form-control" aria-label="Id_card" aria-describedby="basic-addon1">        
             </div>
 
         <div class="col-sm-12">
