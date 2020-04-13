@@ -6,12 +6,12 @@ crossorigin="anonymous">
 //print_r($_POST);
 
 include('koneksi.php');
-$nama=$_POST['nama'];
-$harga=$_POST['harga'];
-$satuan=$_POST['satuan'];
-$kategori=$_POST['kategori'];
-$gambar=$_POST['gambar'];
-$stok=$_POST['stok'];
+$nama=$_POST['namas'];
+$harga=$_POST['hargas'];
+$satuan=$_POST['satuans'];
+$kategori=$_POST['kategoris'];
+$gambar=$_POST['gambars'];
+$stok=$_POST['stoks'];
 
 $query = mysqli_query($connect,"INSERT INTO `inventory` (`kode`, `nama`, `harga`, `satuan`, `kategori`, `gambar`, `stok`) 
                                 VALUES (NULL, '$nama', '$harga', '$satuan', '$kategori', '$gambar', '$stok')");
