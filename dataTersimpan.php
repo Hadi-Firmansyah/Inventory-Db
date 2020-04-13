@@ -30,6 +30,9 @@ th{
 tr{
     font-family: 'Quicksand';
 }
+a{
+    font-family: 'Quicksand';
+}
 
 
 </style>
@@ -40,10 +43,12 @@ $query=mysqli_query($connect,"SELECT * FROM `inventory` ");
 
 ?>
 <body>
+<hr>
+<a href="inventory.php" style="text-decoration : none;margin-left : 45%;"> + Tambah Data</a>
 <table border ="1" cellpadding = "20" cellspacing = "0" align= "center"   style='margin-top :10px'>
 <tr  align="center">
     <hr>
-<th>Action</th>
+<!-- <th>No</th> -->
 <th>Kode Produk</th>
 <th>Nama Produk</th>
 <th>Harga</th>
@@ -51,16 +56,13 @@ $query=mysqli_query($connect,"SELECT * FROM `inventory` ");
 <th>Kategori</th>
 <th>Gambar</th>
 <th>Stok</th>
+<th>Action</th>
 </tr> 
 
 <?php while($data=mysqli_fetch_array($query)){ ?>
     
     <tr alig align="center">
-        <td>
-        <button class="btn btn-danger">
-            <a href="delete.php?id=<?php echo $data['kode']?>" style="text-decoration:none; color:white;">Delete</a></button>
-
-        </td>
+        <!-- <td></td> -->
         <td> <?php echo $data['kode']?> </td>
         <td> <?php echo $data['nama']?> </td>
         <td> <?php echo $data['harga']?> </td>
@@ -73,6 +75,13 @@ $query=mysqli_query($connect,"SELECT * FROM `inventory` ");
         <?php }else{ ?>
             <td><?php echo $data['stok']?></td>
             <?php } ?>
+        <td>
+        <button class="btn btn-danger" style=" width: 100px">
+            <a href="delete.php?id=<?php echo $data['kode']?>" style="text-decoration:none; color:white;">Delete</a></button>
+        <button class="btn btn-success" style=" width: 100px">
+            <a href="form-edit.php?id=<?php echo $data['kode']?>" style="text-decoration:none; color:white;">Edit</a></button>
+
+        </td>
         
     </tr>
 <?php } ?>
